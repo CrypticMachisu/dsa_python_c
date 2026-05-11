@@ -31,9 +31,13 @@ print("Using range")
 for i in range(8):
     print(i)
 print("\n")
+
+
 for i in range(18):
     if i == 17:
         print(i)
+
+getvalues()
 
 # print("Using items")
 # items = [1,2,3,4,5,6,7,8]

@@ -63,12 +63,12 @@ def convert_tuple_list():
     """Convert between tuple and list"""
     numbers = (1, 2, 3)
 
-    numbers_list = list(numbers)
+    numbers_list = list(numbers)  # typecast a tuple to a list
     print("Tuple to list:", numbers_list)
 
     numbers_list.append(4)
 
-    numbers_tuple = tuple(numbers_list)
+    numbers_tuple = tuple(numbers_list)  # typecast a list to a tuple
     print("List back to tuple:", numbers_tuple)
 
 
@@ -87,7 +87,7 @@ def nested_tuple():
     nested = ((1, 2), (3, 4), (5, 6))
 
     print("Nested tuple:", nested)
-    print("Access inner element:", nested[1][0])  # 3
+    print("Access inner element:", nested[1][1])  # 4
 
 
 def tuple_immutability():

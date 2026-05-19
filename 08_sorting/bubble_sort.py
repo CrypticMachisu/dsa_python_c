@@ -1,13 +1,21 @@
-# Bubble Sort
+import random
 
-def bubble_sort(arr):
-    n = len(arr)
+def bubbleSort(unsorted_list):
+    number_of_elements: int = len(unsorted_list)
+    for outer_loop in range(number_of_elements):
+        for inner_loop in range(number_of_elements - 1 - outer_loop):
+            if unsorted_list[inner_loop] > unsorted_list[inner_loop + 1]:
+                temp = unsorted_list[inner_loop]
+                unsorted_list[inner_loop] = unsorted_list[inner_loop + 1]
+                unsorted_list[inner_loop + 1] = temp
 
-    for i in range(n):
-        for j in range(0, n-i-1):
-            if arr[j] > arr[j+1]:
-                arr[j], arr[j+1] = arr[j+1], arr[j]
+    return unsorted_list
 
-arr = [5, 3, 2, 4, 1]
-bubble_sort(arr)
-print(arr)
+def getValues():
+    # unsortedList = [5, 4, 3, 2, 1]
+    unsortedList = random.sample(range(1,10),5)
+    print(f"Unordered list is : {unsortedList}")
+    sortedlist = bubbleSort(unsortedList)
+    print(f"Sorted list {sortedlist}")
+
+getValues()
